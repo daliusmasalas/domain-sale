@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domenai parduodami</title>
+<meta name="description" content="Penki technologijų domenai parduodami: prognozavimas.lt, dipramonei.lt, diptech.lt, deep-tech.lt, deeptech.lt">
+<style>
+  :root{
+    --bg: #0B1417;
+    --bg-panel: #0F1B1F;
+    --line: #24373D;
+    --text: #E8E3D8;
+    --text-dim: #83969C;
+    --accent: #E2AE45;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* current-domain banner */
+  #banner{
+    display:none;
+    background: var(--accent);
+    color: #14100A;
+    font-family: "Berkeley Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    text-align:center;
+    padding: 10px 16px;
+  }
+  #banner strong{ font-weight: 700; }
+
+  header.hero{
+    padding: 96px 0 64px;
+    border-bottom: 1px solid var(--line);
+  }
+  .kicker{
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0 0 22px;
+  }
+  h1{
+    font-size: clamp(34px, 5.4vw, 50px);
+    line-height: 1.12;
+    font-weight: 500;
+    margin: 0 0 22px;
+    max-width: 15ch;
+    color: var(--text);
+  }
+  .lede{
+    font-size: 18px;
+    color: var(--text-dim);
+    max-width: 46ch;
+    margin: 0;
+  }
+
+  svg.horizon{
+    display:block;
+    width: 100%;
+    height: auto;
+    margin-top: 56px;
+  }
+
+  section.listing{
+    padding: 8px 0 40px;
+  }
+  .domain-row{
+    padding: 40px 0;
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .domain-row:first-child{ padding-top: 44px; }
+  .domain-row.current{
+    background: linear-gradient(90deg, rgba(226,174,69,0.08), transparent 60%);
+    margin: 0 -28px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .domain-name{
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: clamp(22px, 3.4vw, 28px);
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .domain-name .dot{ color: var(--accent); }
+  .domain-tag{
+    font-size: 12px;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    color: var(--accent);
+    background: rgba(226,174,69,0.1);
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .domain-desc{
+    color: var(--text-dim);
+    font-size: 16px;
+    max-width: 52ch;
+  }
+  .domain-link{
+    color: var(--text);
+    font-size: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+    width: fit-content;
+  }
+  .domain-link:hover{ color: var(--accent); }
+
+  footer{
+    padding: 56px 0 80px;
+    color: var(--text-dim);
+    font-size: 14px;
+  }
+  footer a{ color: var(--text); }
+  footer .contact{
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 15px;
+    color: var(--text);
+    margin: 0 0 8px;
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    .domain-row{ transition: background 0.2s ease; }
+  }
+</style>
+</head>
+<body>
+
+<div id="banner"></div>
+
+<div class="wrap">
+  <header class="hero">
+    <p class="kicker">domenai / parduodama</p>
+    <h1>Penki vardai, kurių dar niekas neužregistravo savo idėjai.</h1>
+    <p class="lede">Penki laisvi, techninei ir prognostinei krypčiai tinkantys .lt domenai. Kiekvienas jų gali tapti projekto, startuolio ar produkto namais.</p>
+  </header>
+
+  <svg class="horizon" viewBox="0 0 720 120" preserveAspectRatio="none" role="presentation" aria-hidden="true">
+    <polyline points="0,90 60,72 120,84 180,50 240,66 300,30 360,54 420,20 480,44 540,16 600,38 660,10 720,28"
+      fill="none" stroke="#24373D" stroke-width="1.5"/>
+    <polyline points="0,100 60,96 120,98 180,86 240,90 300,74 360,84 420,62 480,72 540,50 600,64 660,40 720,52"
+      fill="none" stroke="#E2AE45" stroke-width="1.5" opacity="0.55"/>
+  </svg>
+
+  <section class="listing" id="listing">
+
+    <div class="domain-row" data-domain="prognozavimas.lt">
+      <div class="domain-name">prognozavimas<span class="dot">.</span>lt</div>
+      <a class="domain-link" href="mailto:daliusmasalas@gmail.com?subject=D%C4%97l%20domeno%20prognozavimas.lt">Susisiekti dėl pirkimo →</a>
+    </div>
+
+    <div class="domain-row" data-domain="dipramonei.lt">
+      <div class="domain-name">dipramonei<span class="dot">.</span>lt</div>
+      <a class="domain-link" href="mailto:daliusmasalas@gmail.com?subject=D%C4%97l%20domeno%20dipramonei.lt">Susisiekti dėl pirkimo →</a>
+    </div>
+
+    <div class="domain-row" data-domain="diptech.lt">
+      <div class="domain-name">diptech<span class="dot">.</span>lt</div>
+      <a class="domain-link" href="mailto:daliusmasalas@gmail.com?subject=D%C4%97l%20domeno%20diptech.lt">Susisiekti dėl pirkimo →</a>
+    </div>
+
+    <div class="domain-row" data-domain="deep-tech.lt">
+      <div class="domain-name">deep<span class="dot">-</span>tech<span class="dot">.</span>lt</div>
+      <a class="domain-link" href="mailto:daliusmasalas@gmail.com?subject=D%C4%97l%20domeno%20deep-tech.lt">Susisiekti dėl pirkimo →</a>
+    </div>
+
+    <div class="domain-row" data-domain="deeptech.lt">
+      <div class="domain-name">deeptech<span class="dot">.</span>lt</div>
+      <a class="domain-link" href="mailto:daliusmasalas@gmail.com?subject=D%C4%97l%20domeno%20deeptech.lt">Susisiekti dėl pirkimo →</a>
+    </div>
+
+  </section>
+
+  <footer>
+    <p class="contact"><a href="mailto:daliusmasalas@gmail.com">daliusmasalas@gmail.com</a></p>
+    <p>Rašykite, kuris domenas jus domina.</p>
+  </footer>
+</div>
+
+<script>
+  (function(){
+    var host = window.location.hostname.replace(/^www\./, '');
+    var row = document.querySelector('.domain-row[data-domain="' + host + '"]');
+    var banner = document.getElementById('banner');
+    if (row) {
+      row.classList.add('current');
+      var tag = document.createElement('span');
+      tag.className = 'domain-tag';
+      tag.textContent = 'šis domenas';
+      row.querySelector('.domain-name').appendChild(tag);
+
+      banner.style.display = 'block';
+      banner.innerHTML = 'Jūs esate <strong>' + host + '</strong> — šis domenas parduodamas.';
+
+      row.scrollIntoView({ behavior: 'instant', block: 'start' });
+    }
+  })();
+</script>
+
+</body>
+</html>
